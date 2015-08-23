@@ -1,0 +1,31 @@
+{
+  "name": "es6-lab",
+  "version": "1.0.0",
+  "description": "ES6 experiments and snippets",
+  "author": "Wesley Anemam (wesleylira@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesleyanemam/es6-lab.git"
+  },
+  "keywords": [
+    "es6",
+    "lab",
+    "snippets"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesleyanemam/es6-lab/issues"
+  },
+  "homepage": "https://github.com/wesleyanemam/es6-lab",
+  "main": "index.js",
+  "scripts": {
+    "es6to5": "node node_modules/babel/bin/babel --optional runtime lab --out-dir build",
+    "watch": "node node_modules/watch/cli.js 'npm test' lab",
+    "test": "clear && npm run es6to5 && node build/index.js"
+  },
+  "dependencies": {
+    "babel": "^5.8.21",
+    "babel-runtime": "^5.8.20",
+    "watch": "^0.16.0"
+  }
+}
