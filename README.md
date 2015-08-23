@@ -1,5 +1,5 @@
 # es6-lab
-ES6 experiments and snippets. This project uses [babeljs compiler](https://babeljs.io) to parse ES6 to ES5
+ES6 experiments and snippets. This project uses (babel compiler)[https://babeljs.io/] to parse ES6 to ES5
 
 #Compile
 Compiles ES6 to ES5 code
