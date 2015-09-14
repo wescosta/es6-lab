@@ -1,7 +1,17 @@
 'use strict'
 
-import * as promise from 'promise'
+import Jasmine from 'jasmine'
 
-var features = [
-	promise
-].forEach(feature => feature.test())
+var jasmine = new Jasmine()
+
+jasmine.loadConfigFile('spec/support/jasmine.json')
+jasmine.onComplete(function(passed) {
+  if(passed) {
+    console.log('All specs have passed')
+  }
+  else {
+     console.log('Ops! At least one spec has failed')
+  }
+})
+
+jasmine.execute()

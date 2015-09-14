@@ -20,12 +20,15 @@
   "main": "index.js",
   "scripts": {
     "es6to5": "node node_modules/babel/bin/babel --optional runtime lab --out-dir build",
-    "watch": "node node_modules/watch/cli.js 'npm test' lab",
-    "test": "clear && npm run es6to5 && node build/index.js"
+    "jasmine": "node node_modules/jasmine/bin/jasmine.js",
+    "watch": "npm run es6to5 -- -w",
+    "test": "npm run es6to5 && npm run jasmine"
   },
   "dependencies": {
     "babel": "^5.8.21",
-    "babel-runtime": "^5.8.20",
-    "watch": "^0.16.0"
+    "babel-runtime": "^5.8.20"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.2"
   }
 }
